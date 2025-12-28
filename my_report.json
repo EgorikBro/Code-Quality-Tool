@@ -1,0 +1,83 @@
+{
+    "examples/bad_code.py": {
+        "pep8": {
+            "violations": [
+                "examples/bad_code.py:9:6: E225 missing whitespace around operator",
+                "examples/bad_code.py:10:6: E225 missing whitespace around operator",
+                "examples/bad_code.py:13:1: E302 expected 2 blank lines, found 1",
+                "examples/bad_code.py:15:1: W391 blank line at end of file"
+            ],
+            "count": 4
+        },
+        "complexity": {
+            "details": [
+                {
+                    "name": "complex_function",
+                    "type": "function",
+                    "complexity": 5,
+                    "rank": "F"
+                },
+                {
+                    "name": "EmptyClass",
+                    "type": "function",
+                    "complexity": 1,
+                    "rank": "C"
+                }
+            ],
+            "average": 3.0
+        },
+        "docstrings": {
+            "missing": [
+                {
+                    "type": "FunctionDef",
+                    "name": "complex_function",
+                    "lineno": 1
+                },
+                {
+                    "type": "ClassDef",
+                    "name": "EmptyClass",
+                    "lineno": 13
+                }
+            ],
+            "coverage": 0.0,
+            "total_definitions": 2
+        }
+    },
+    "examples/good_code.py": {
+        "pep8": {
+            "violations": [
+                "examples/good_code.py:7:1: E302 expected 2 blank lines, found 1",
+                "examples/good_code.py:16:1: W391 blank line at end of file"
+            ],
+            "count": 2
+        },
+        "complexity": {
+            "details": [
+                {
+                    "name": "add",
+                    "type": "function",
+                    "complexity": 1,
+                    "rank": "F"
+                },
+                {
+                    "name": "Calculator",
+                    "type": "function",
+                    "complexity": 2,
+                    "rank": "C"
+                },
+                {
+                    "name": "multiply",
+                    "type": "function",
+                    "complexity": 1,
+                    "rank": "M"
+                }
+            ],
+            "average": 1.3333333333333333
+        },
+        "docstrings": {
+            "missing": [],
+            "coverage": 100.0,
+            "total_definitions": 3
+        }
+    }
+}
