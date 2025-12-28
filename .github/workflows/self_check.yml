@@ -8,9 +8,6 @@ on:
 jobs:
   analyze:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./code_quality_tool
 
     steps:
     - uses: actions/checkout@v3
@@ -33,8 +30,8 @@ jobs:
       with:
         name: code-quality-reports
         path: |
-          code_quality_tool/src_report.md
-          code_quality_tool/src_report.json
-          code_quality_tool/examples_report.md
-          code_quality_tool/examples_report.json
+          src_report.md
+          src_report.json
+          examples_report.md
+          examples_report.json
 
