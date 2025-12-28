@@ -22,9 +22,13 @@ jobs:
     - name: Run Analysis on src/
       run: |
         python main.py src/ --output src_report
+      env:
+        PYTHONPATH: .
     - name: Run Analysis on examples/
       run: |
         python main.py examples/ --output examples_report
+      env:
+        PYTHONPATH: .
     - name: Upload Reports
       uses: actions/upload-artifact@v4
       with:
